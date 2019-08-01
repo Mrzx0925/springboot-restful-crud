@@ -17,11 +17,11 @@ public class MyLocaleResolver implements LocaleResolver{
     public Locale resolveLocale(HttpServletRequest request) {
         String s = request.getParameter("s");
         Locale locale = Locale.getDefault();
-        System.out.println(s);
+        //System.out.println(s);
         if(!StringUtils.isEmpty(s)){
              String spilt[]=  s.split("-");
               //语言代码，以及语言国家
-               System.out.println(spilt[0]+"   "+spilt[1]);
+               //System.out.println(spilt[0]+"   "+spilt[1]);
                 locale = new Locale(spilt[0],spilt[1]);
         }
 
